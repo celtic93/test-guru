@@ -1,6 +1,11 @@
 class AddDefaultValues < ActiveRecord::Migration[5.2]
-  def change
+  def up
     change_column_default :tests, :level, 1
     change_column_default :answers, :correct, false
+  end
+
+  def down
+    change_column_default :tests, :level, nil
+    change_column_default :answers, :correct, nil
   end
 end
