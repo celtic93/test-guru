@@ -2,6 +2,6 @@ class Test < ApplicationRecord
 
   def self.by_category(category)
     category_id = Category.find_by(title: category).id
-    where(category_id: category_id).order(id: :desc)
+    order(title: :desc).where(category_id: category_id).pluck(:title)
   end
 end
