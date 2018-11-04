@@ -1,7 +1,7 @@
 class Test < ApplicationRecord
 
   def self.by_category(category)
-    category_id = Category.find_by(title: category).id
-    order(title: :desc).where(category_id: category_id).pluck(:title)
+    Test.joins("INNER JOIN categories ON categories.id = tests.category_id")
+        .where("categories.title = ?", category).order(title: :desc).pluck(:title)
   end
 end
