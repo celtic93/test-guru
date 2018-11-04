@@ -43,3 +43,13 @@ Answer.create([{ body: 'Ruby Basic answer', question_id: 1 },
 User.create([{ username: 'Bob', email: 'bob@gmail.com' },
              { username: 'Alice', email: 'alice@gmail.com' },
              { username: 'Dio', email: 'dio@gmail.com' }])
+
+StartedTest.create([{user_id: 1, test_id: 2, test_started: true},
+                    {user_id: 1, test_id: 5, test_passed: true},
+                    {user_id: 1, test_id: 7, test_started: true},
+                    {user_id: 2, test_id: 1, test_passed: true},
+                    {user_id: 2, test_id: 6, test_started: true},
+                    {user_id: 2, test_id: 8, test_passed: true},
+                    {user_id: 3, test_id: 3, test_started: true},
+                    {user_id: 3, test_id: 4, test_passed: true},
+                    {user_id: 3, test_id: 9, test_started: true}])
