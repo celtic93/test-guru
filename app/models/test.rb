@@ -3,7 +3,7 @@ class Test < ApplicationRecord
   belongs_to :category
   has_many :started_tests
   has_many :users, through: :started_tests
-  belongs_to :author, class_name 'User'
+  belongs_to :author, class_name: 'User'
 
   def self.by_category(category)
     Test.joins("INNER JOIN categories ON categories.id = tests.category_id")
