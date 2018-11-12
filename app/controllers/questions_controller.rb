@@ -1,10 +1,13 @@
 class QuestionsController < ApplicationController
 
-  before_action :test_find, only: [:index]
+  before_action :test_find, only: [:index, :create]
   before_action :question_find, only: [:show, :delete]
 
   rescue_from ActiveRecord::RecordNotFound,
     with: :rescue_question_not_found
+
+  rescue_from ActiveRecord::RecordInvalid,
+    with: :rescue_blank_attribute
 
   def index
     render plain: @test.questions.inspect
@@ -19,7 +22,7 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    question = Question.create(question_params)
+    question = @test.questions.create!(question_params)
     render plain: question.inspect
   end
 
@@ -43,6 +46,10 @@ class QuestionsController < ApplicationController
   end
 
   def rescue_question_not_found
-    render plain: 'The question not found'
+    render plain: 'Not found'
+  end
+
+  def rescue_blank_attribute
+    render plain: "Can't be blank"
   end
 end
