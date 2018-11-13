@@ -6,9 +6,6 @@ class QuestionsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound,
     with: :rescue_question_not_found
 
-  rescue_from ActiveRecord::RecordInvalid,
-    with: :rescue_blank_attribute
-
   def index
     render plain: @test.questions.inspect
   end
@@ -22,8 +19,13 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    question = @test.questions.create!(question_params)
-    render plain: question.inspect
+    question = @test.questions.new(question_params)
+
+    if question.save
+      render plain: question.inspect
+    else
+      render plain: 'The question is not created. Wrong data'
+    end
   end
 
   def delete
@@ -47,9 +49,5 @@ class QuestionsController < ApplicationController
 
   def rescue_question_not_found
     render plain: 'Not found'
-  end
-
-  def rescue_blank_attribute
-    render plain: "Can't be blank"
   end
 end
