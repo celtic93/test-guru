@@ -1,20 +1,3 @@
 <h1>Edit <%= @question.body %></h1>
 
-<%= form_with model: [@test, @question], local: true do |form| %>
-  <% if @question.errors.present? %>
-    <div>
-      <h2><%= pluralize(@question.errors.count, 'error') %> detected</h2>
-      <ul>
-        <% @question.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-  <p>
-    <%= form.label :body %><br>
-    <%= form.text_field :body, id: :question_body %>
-  </p><br>
-
-  <p><%= form.submit %></p>
-<% end %>
+<%= render 'form' %>
