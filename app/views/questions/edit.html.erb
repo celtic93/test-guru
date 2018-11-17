@@ -1,4 +1,4 @@
-<h1>Create new question</h1>
+<h1>Edit <%= @question.body %></h1>
 
 <%= form_with model: [@test, @question], local: true do |form| %>
   <% if @question.errors.present? %>

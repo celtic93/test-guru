@@ -1,0 +1,11 @@
+<h1>Test: <%= @test.title %></h1>
+<p><%= pluralize(@test.questions.count, 'question') %>:</p>
+<p>
+  <ul>
+  <% @test.questions.each do |question| %>
+    <li>
+      <%= question.body %>
+    </li>
+  <% end %>
+  </ul>
+</p>
