@@ -36,7 +36,7 @@ class QuestionsController < ApplicationController
   private
 
   def question_params
-    params.permit(:body, :test_id)
+    params.permit(:body)
   end
 
   def test_find
