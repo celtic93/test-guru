@@ -5,6 +5,6 @@ module ApplicationHelper
   end
 
   def github_url(author, repo)
-    return "https://github.com/#{author}/#{repo}"
+    link_to('Проект TestGuru', "https://github.com/#{author}/#{repo}", target: '_blank', rel: 'noopener noreferrer')
   end
 end
