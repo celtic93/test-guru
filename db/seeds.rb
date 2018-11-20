@@ -43,13 +43,3 @@ answers = Answer.create([{ body: 'Ruby Basic answer', question: questions[0] },
                         { body: 'HTML Basic answer', question: questions[6] },
                         { body: 'HTML Intermediate answer', question: questions[7] },
                         { body: 'HTML Advanced answer', question: questions[8] }])
-
-started_tests = StartedTest.create([{ user: users[0], test: tests[1], test_started: true },
-                                    { user: users[0], test: tests[4], test_passed: true },
-                                    { user: users[0], test: tests[6], test_started: true },
-                                    { user: users[1], test: tests[0], test_passed: true },
-                                    { user: users[1], test: tests[5], test_started: true },
-                                    { user: users[1], test: tests[7], test_passed: true },
-                                    { user: users[2], test: tests[2], test_started: true },
-                                    { user: users[2], test: tests[3], test_passed: true },
-                                    { user: users[2], test: tests[8], test_started: true }])
