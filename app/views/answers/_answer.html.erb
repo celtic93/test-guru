@@ -1,10 +1,10 @@
 <li>
-  <%= @answer.body %><br>
+  <%= answer.body %><br>
 
-  <%= link_to 'Show', answer_path(@answer) %>
-  <%= link_to 'Edit', edit_answer_path(@answer) %>
+  <%= link_to 'Show', answer_path(answer) %>
+  <%= link_to 'Edit', edit_answer_path(answer) %>
   <%= link_to 'Show', 
-              answer_path(@answer),
+              answer_path(answer),
               method: :delete,
               data: { confirm: 'Are you sure?' } %>
 </li>
