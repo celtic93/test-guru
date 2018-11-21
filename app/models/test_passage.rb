@@ -20,8 +20,8 @@ class TestPassage < ApplicationRecord
 
   private
 
-  def before_validation
-    self.current_question = test.question.first if test.present?
+  def before_validation_set_first_question
+    self.current_question = test.questions.first if test.present?
   end
 
   def correct_answer?(answer_ids)
@@ -33,6 +33,6 @@ class TestPassage < ApplicationRecord
   end
 
   def next_question
-    test.question.order(:id).where('id > ?', current_question.id).first
+    test.questions.order(:id).where('id > ?', current_question.id).first
   end
 end
