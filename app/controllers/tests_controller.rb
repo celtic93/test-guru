@@ -1,6 +1,6 @@
 class TestsController < ApplicationController
-  before_action :test_find, only: %i[show start]
-  before_action :set_user, only: %i[start]
+  before_action :find_test, only: %i[show start]
+  before_action :find_user, only: %i[start]
 
   def index
     @tests = Test.all
@@ -17,11 +17,11 @@ class TestsController < ApplicationController
 
   private
 
-  def test_find
+  def find_test
     @test = Test.find(params[:id])    
   end
 
-  def set_user
+  def find_user
     @user = User.first
   end
 end
