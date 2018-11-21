@@ -19,6 +19,10 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def success_percent
+    (self.correct_questions.fdiv(test.questions.count)*100).round
+  end
+
   private
 
   def before_validation_set_first_question
