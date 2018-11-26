@@ -1,5 +1,5 @@
 <h1>The <%= @test_passage.test.title %> Test was completed!</h1>
 
-<h2>The percentage of correct answers is <%= result_message %></h2>
+<%= result_message(@test_passage) %>
 
 <%= link_to 'Back to tests', tests_path %>
