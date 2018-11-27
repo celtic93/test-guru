@@ -3,7 +3,9 @@
 <% if logged_in? %>
   <p class="nav user">
     Welcome, <b><%= current_user.username %></b> Guru
-    <br><%= link_to 'Logout', root_path %>
+    <br><%= link_to 'Logout', logout_path,
+          method: :delete,
+          data: { confirm: 'Are you sure?' } %>
   </p>
 <% else %>
   <p class="nav user">
