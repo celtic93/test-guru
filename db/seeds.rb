@@ -10,9 +10,9 @@ categories = Category.create([{ title: 'Ruby' },
                               { title: 'Go' },
                               { title: 'HTML' }])
 
-users = User.create([{ username: 'Bob', email: 'bob@gmail.com' },
-                    { username: 'Alice', email: 'alice@gmail.com' },
-                    { username: 'Dio', email: 'dio@gmail.com' }])
+users = User.create([{ username: 'Bob', email: 'bob@gmail.com', password: '123' },
+                    { username: 'Alice', email: 'alice@gmail.com', password: '345' },
+                    { username: 'Dio', email: 'dio@gmail.com', password: '567' }])
 
 tests = Test.create([{ title: 'Ruby Basic', category: categories[0], author: users[0] },
                     { title: 'Ruby Intermediate', level: 1, category: categories[0], author: users[0] },
