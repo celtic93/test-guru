@@ -1,5 +1,5 @@
-class AnswersController < ApplicationController
-  before_action :authenticate_user!
+class Admin::AnswersController < Admin::BaseController
+  
   before_action :find_answer, only: %i[show edit update destroy]
   before_action :find_question, only: %i[new create]
 
@@ -14,7 +14,7 @@ class AnswersController < ApplicationController
   end
 
   def create
-    @answer = @question.answer.new(answer_params)
+    @answer = @question.answers.new(answer_params)
 
     if @answer.save
       redirect_to @answer

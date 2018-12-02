@@ -14,15 +14,15 @@ users = User.create([{ username: 'Bob', email: 'bob@gmail.com', password: '123' 
                     { username: 'Alice', email: 'alice@gmail.com', password: '345' },
                     { username: 'Dio', email: 'dio@gmail.com', password: '567' }])
 
-tests = Test.create([{ title: 'Ruby Basic', category: categories[0], author: users[0] },
-                    { title: 'Ruby Intermediate', level: 1, category: categories[0], author: users[0] },
-                    { title: 'Ruby Advanced', level: 2, category: categories[0], author: users[0] },
-                    { title: 'Go Basic', category: categories[1], author: users[0] },
-                    { title: 'Go Intermediate', level: 1, category: categories[1], author: users[0] },
-                    { title: 'Go Advanced', level: 2, category: categories[1], author: users[0] },
-                    { title: 'HTML Basic', category: categories[2], author: users[0] },
-                    { title: 'HTML Intermediate', level: 1, category: categories[2], author: users[0] },
-                    { title: 'HTML Advanced', level: 2, category: categories[2], author: users[0] }])
+tests = Test.create([{ title: 'Ruby Basic', category: categories[0], author: User.first },
+                    { title: 'Ruby Intermediate', level: 1, category: categories[0], author: User.first },
+                    { title: 'Ruby Advanced', level: 2, category: categories[0], author: User.first },
+                    { title: 'Go Basic', category: categories[1], author: User.first },
+                    { title: 'Go Intermediate', level: 1, category: categories[1], author: User.first },
+                    { title: 'Go Advanced', level: 2, category: categories[1], author: User.first },
+                    { title: 'HTML Basic', category: categories[2], author: User.first },
+                    { title: 'HTML Intermediate', level: 1, category: categories[2], author: User.first },
+                    { title: 'HTML Advanced', level: 2, category: categories[2], author: User.first }])
 
 questions = Question.create([{ body: 'Ruby Basic question 1', test: tests[0] },
                             { body: 'Ruby Basic question 2', test: tests[0] },
