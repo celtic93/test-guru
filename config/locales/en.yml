@@ -1,6 +1,14 @@
 en:
   hello: "Hello world"
 
+  layouts:
+    header:
+      welcome: "Welcome"
+      logout: "Logout"
+      confirm: "Are you sure?"
+      login: "login"
+      signup: "SignUp"
+
   helpers:
     label:
       test:
@@ -21,19 +29,61 @@ en:
   tests:
     index:
       header: "Tests"
+      title: "Title"
+      level: "Level"
+      questions: "Questions"
+      actions: "Action"
+    test:
+      start: "Start"
 
   test_passages:
     result:
       header: "The %{title} Test was Completed!"
 
   admin:
+    nav:
+      logout: "Logout"
+      confirm: "Are you sure?"
+      welcome: "Welcome"
+      admin_panel: "Admin Panel"
     tests:
       index:
         header: "Tests"
+        title: "Title"
+        level: "Level"
+        questions: "Questions"
+        actions: "Actions"
+        new: "New test"
+      new:
+        header: "Create new test"
       create:
         success: "Test was successfully created"
+      update:
+        success: "Test was successfully updated"
+      destroy:
+        success: "Test was successfully destroyed"
+      edit:
+        header: "Edit %{title} test"
+      show:
+        new: "New question"
+        header: "The %{title} Test"
+        questions_count:
+          one: "%{count} question"
+          other: "%{count} questions"        
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
+    questions:
+      question:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure?"
 
   test_mailer:
     completed_test:
       subject: "You just completed the TestGuru test!"
 
+  back: "Back"
