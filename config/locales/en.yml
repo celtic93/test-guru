@@ -6,7 +6,7 @@ en:
       welcome: "Welcome"
       logout: "Logout"
       confirm: "Are you sure?"
-      login: "login"
+      login: "Login"
       signup: "SignUp"
 
   helpers:
