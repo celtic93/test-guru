@@ -1,6 +1,14 @@
 ru:
   hello: "Привет, мир"
 
+  layouts:
+    header:
+      welcome: "Добро пожаловать,"
+      logout: "Выйти"
+      confirm: "Вы уверены?"
+      login: "Войти"
+      signup: "Регистрация"
+
   helpers:
     label:
       test:
@@ -23,18 +31,63 @@ ru:
   tests:
     index:
       header: "Тесты"
+      title: "Название"
+      level: "Уровень"
+      questions: "Вопросы"
+      actions: "Действие"
+    test:
+      start: "Старт"
 
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
 
   admin:
+    nav:
+      logout: "Выйти"
+      confirm: "Вы уверены?"
+      welcome: "Добро пожаловать,"
+      admin_panel: "Административная панель"
     tests:
       index:
         header: "Тесты"
+        title: "Название"
+        level: "Уровень"
+        questions: "Вопросы"
+        actions: "Действия"
+        new: "Новый тест"
+      new:
+        header: "Создать новый тест"
       create:
         success: "Тест успешно добавлен"
+      update:
+        success: "Тест успешно изменен"
+      destroy:
+        success: "Тест успешно удален"
+      edit:
+        header: "Изменить %{title} тест"
+      show:
+        new: "Новый вопрос"
+        header: "%{title} тест"
+        questions_count:
+          few: "%{count} вопроса"
+          many: "%{count} вопросов"
+          one: "%{count} вопрос"
+          other: "%{count} вопросов"        
+      test:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
+    questions:
+      question:
+        show: "Показать"
+        edit: "Изменить"
+        delete: "Удалить"
+        confirm: "Вы уверены?"
 
   test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
+
+  back: "Назад"

@@ -1,7 +1,7 @@
-<h1>Test: <%= @test.title %></h1>
-<p><%= link_to 'New question', new_admin_test_question_path(@test) %></p>
-<p><%= link_to 'Back to tests list', admin_tests_path %></p>
+<h1><%= t('.header', title: @test.title) %></h1>
+<p><%= link_to t('.new'), new_admin_test_question_path(@test) %></p>
+<p><%= link_to t('back'), admin_tests_path %></p>
 
-<p><%= pluralize(@test.questions.count, 'question') %>:</p>
+<p><%= t('.questions_count', count: @test.questions.count) %></p>
 
 <table><%= render @test.questions %></table>
