@@ -1,10 +1,10 @@
-<div class="nav nav-admin">
-  <span class="nav-admin title">TestGuru <%= t('.admin_panel') %></span>
-
-  <div class="nav-admin user">
+<nav class="navbar navbar-light bg-light">
+  <%= link_to 'TestGuru', root_path, class: 'navbar-brand' %>
+  <span class="navbar-text">
     <%= t('.welcome') %> <b class="nav-admin user-username"><%= current_user.username %></b> Guru | 
+    <%= t('.admin_panel') %> |
     <%= link_to t('.logout'), destroy_user_session_path,
                     method: :delete,
                     data: { confirm: t('.confirm') } %>
-  </div>
-</div>
+  </span>
+</nav>
