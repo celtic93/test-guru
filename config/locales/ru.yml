@@ -41,6 +41,9 @@ ru:
   test_passages:
     result:
       header: "Тест %{title} успешно завершен!"
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "При сохранении gist произошла ошибка"
 
   admin:
     nav:
