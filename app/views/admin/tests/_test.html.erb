@@ -2,8 +2,8 @@
   <td><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.questions.count %></td>
-  <td><%= button_to t('.show'), admin_test_path(test), class: 'btn btn-primary' %></td>
-  <td><%= button_to t('.edit'), edit_admin_test_path(test), class: 'btn btn-primary' %></td>
+  <td><%= button_to t('.show'), admin_test_path(test), method: :get, class: 'btn btn-primary' %></td>
+  <td><%= button_to t('.edit'), edit_admin_test_path(test), method: :get, class: 'btn btn-primary' %></td>
   <td>
     <%= button_to t('.delete'),
           admin_test_path(test),

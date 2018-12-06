@@ -4,6 +4,6 @@ class SessionsController < Devise::SessionsController
   private
 
   def greeting
-    flash[:notice] = "Welcome, #{current_user.first_name}"
+    flash[:success] = "Welcome, #{current_user.first_name}"
   end
 end

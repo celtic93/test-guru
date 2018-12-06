@@ -1,3 +1,5 @@
+require 'pry'
+
 module ApplicationHelper
 
   def current_year
@@ -12,5 +14,16 @@ module ApplicationHelper
     flash.map do |key, msg|
       content_tag :p, msg, class: "flash #{key}"
     end.join.html_safe
+  end
+
+  def flash_class(key)
+    classes = {
+      notice: :success,
+      alert: :danger,
+      failure: :danger,
+      success: :success 
+    }
+
+    classes[key.to_sym]
   end
 end
