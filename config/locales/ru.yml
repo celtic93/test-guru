@@ -94,3 +94,5 @@ ru:
       subject: "Вы успешно завершили тест на TestGuru!"
 
   back: "Назад"
+
+  description: "Вопрос из %{title} теста от TestGuru"

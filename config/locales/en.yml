@@ -90,3 +90,5 @@ en:
       subject: "You just completed the TestGuru test!"
 
   back: "Back"
+
+  description: "A question about %{title} from TestGuru"
