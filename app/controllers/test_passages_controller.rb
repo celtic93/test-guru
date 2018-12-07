@@ -28,7 +28,7 @@ class TestPassagesController < ApplicationController
                       url: result[:html_url], url_hash: result[:id])
 
     flash_options = if @gist.save
-      { notice: t('.success') }
+      { notice: "#{t('.success')} #{@gist.url}" }
     else
       { alert: t('.failure') }
     end
