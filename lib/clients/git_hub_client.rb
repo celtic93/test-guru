@@ -1,6 +1,5 @@
 class GitHubClient
 
-  ROOT_ENDPOINT = 'https://api.github.com'
   ACCESS_TOKEN = ENV['ACCESS_TOKEN']
 
   def initialize
@@ -9,5 +8,9 @@ class GitHubClient
 
   def create_gist(params)
     @http_client.create_gist(params)
+  end
+
+  def last_response
+    @http_client.last_response
   end
 end
