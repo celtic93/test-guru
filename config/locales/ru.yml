@@ -88,6 +88,12 @@ ru:
         edit: "Изменить"
         delete: "Удалить"
         confirm: "Вы уверены?"
+    gists:
+      index:
+        header: "Гисты"
+        question: "Вопрос"
+        link: "Ссылка на гист"
+        author: "Email пользователя"
 
   test_mailer:
     completed_test:

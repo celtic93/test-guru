@@ -84,6 +84,12 @@ en:
         edit: "Edit"
         delete: "Delete"
         confirm: "Are you sure?"
+    gists:
+      index:
+        header: "Gists"
+        question: "Question"
+        link: "Gist URL"
+        author: "User email"
 
   test_mailer:
     completed_test:
