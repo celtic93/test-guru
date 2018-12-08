@@ -1,5 +1,7 @@
 class GistQuestionService
 
+  attr_reader :result
+
   def initialize(question, client: nil)
     @question = question
     @test = @question.test
@@ -7,7 +9,7 @@ class GistQuestionService
   end
 
   def call
-    @client.create_gist(gist_params)    
+    @result = @client.create_gist(gist_params)
   end
 
   def success?
