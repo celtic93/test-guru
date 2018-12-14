@@ -88,9 +88,17 @@ ru:
         edit: "Изменить"
         delete: "Удалить"
         confirm: "Вы уверены?"
+    gists:
+      index:
+        header: "Гисты"
+        question: "Вопрос"
+        link: "Ссылка на гист"
+        author: "Email пользователя"
 
   test_mailer:
     completed_test:
       subject: "Вы успешно завершили тест на TestGuru!"
 
   back: "Назад"
+
+  description: "Вопрос из %{title} теста от TestGuru"
