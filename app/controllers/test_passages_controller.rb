@@ -28,7 +28,7 @@ class TestPassagesController < ApplicationController
     @gist = current_user.gists.new(question: @test_passage.current_question,
                                     url: service.result[:html_url], url_hash: service.result[:id])
 
-    flash_options = if @gist.save && service.success?
+    flash_options = if @gist.save && service.success_call?
       { notice: "#{t('.success')} #{@gist.url}" }
     else
       { alert: t('.failure') }
