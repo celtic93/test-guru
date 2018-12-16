@@ -1,5 +1,3 @@
-require 'pry'
-
 class Admin::TestsController < Admin::BaseController
   
   before_action :find_test, only: %i[show start update destroy edit update_inline]
@@ -41,7 +39,6 @@ class Admin::TestsController < Admin::BaseController
       redirect_to admin_tests_path, notice: t('.success')
     else
       render :index
-      binding.pry
     end
   end
 
