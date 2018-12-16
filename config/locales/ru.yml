@@ -65,6 +65,8 @@ ru:
         success: "Тест успешно добавлен"
       update:
         success: "Тест успешно изменен"
+      update_inline:
+        success: "Тест успешно изменен"
       destroy:
         success: "Тест успешно удален"
       edit:
@@ -76,7 +78,9 @@ ru:
           few: "%{count} вопроса"
           many: "%{count} вопросов"
           one: "%{count} вопрос"
-          other: "%{count} вопросов"        
+          other: "%{count} вопросов"
+      form_inline:
+        submit: "OK"        
       test:
         show: "Показать"
         edit: "Изменить"
