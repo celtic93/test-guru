@@ -1,4 +1,5 @@
 <h1><%= t('.header', title: @test.title) %></h1>
-
-<%= render 'form' %>
+<%= content_tag :div, data: { resource_id: @test.id } do %>
+  <%= render 'form' %>
+<% end %>
 <%= link_to t('back'), admin_tests_path %>
