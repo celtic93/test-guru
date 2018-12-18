@@ -63,6 +63,8 @@ en:
         success: "Test was successfully created"
       update:
         success: "Test was successfully updated"
+      update_inline:
+        success: "Test was successfully updated"
       destroy:
         success: "Test was successfully destroyed"
       edit:
@@ -72,7 +74,9 @@ en:
         header: "The %{title} Test"
         questions_count:
           one: "%{count} question"
-          other: "%{count} questions"        
+          other: "%{count} questions"
+      form_inline:
+        submit: "OK"       
       test:
         show: "Show"
         edit: "Edit"

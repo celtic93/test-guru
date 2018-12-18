@@ -2,6 +2,10 @@
 
 <p>Question <%= @test_passage.question_index %>/<%= @test_passage.test.questions.count %></p>
 
+<div id="progress">
+  <%= content_tag :div, '', id: 'bar', data: { count: @test_passage.test.questions.count, question_index: @test_passage.question_index } %>
+</div>
+
 <p>
   <b><%= @test_passage.current_question.body %></b>
 </p>
