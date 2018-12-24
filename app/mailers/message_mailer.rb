@@ -8,6 +8,6 @@ class MessageMailer < ApplicationMailer
   def contact_me(message)
     @message = message
     
-    mail to: "egorka80@list.ru"
+    mail to: "kirya.domnich@list.ru"
   end
 end
