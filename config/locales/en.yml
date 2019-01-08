@@ -8,6 +8,8 @@ en:
       confirm: "Are you sure?"
       login: "Login"
       signup: "SignUp"
+    footer:
+      contact: "Contact us"
 
   helpers:
     label:
