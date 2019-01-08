@@ -8,6 +8,8 @@ ru:
       confirm: "Вы уверены?"
       login: "Войти"
       signup: "Регистрация"
+    footer:
+      contact: "Напишите нам"
 
   helpers:
     label:
