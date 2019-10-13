@@ -48,14 +48,14 @@ answers = Answer.create([{ body: 'Ruby Basic answer 1-1', question: questions[0]
                         { body: 'Ruby Basic answer 3-2', question: questions[2] },
                         { body: 'Ruby Basic answer 3-3', question: questions[2] },
                         { body: 'Ruby Basic answer 3-4', question: questions[2] },
-                        { body: 'Ruby Intermediate answer', question: questions[3] },
-                        { body: 'Ruby Advanced answer', question: questions[4] },
-                        { body: 'Go Basic answer', question: questions[5] },
-                        { body: 'Go Intermediate answer', question: questions[6] },
-                        { body: 'Go Advanced answer', question: questions[7] },
-                        { body: 'HTML Basic answer', question: questions[8] },
-                        { body: 'HTML Intermediate answer', question: questions[9] },
-                        { body: 'HTML Advanced answer', question: questions[10] }])
+                        { body: 'Ruby Intermediate answer', question: questions[3], correct: true  },
+                        { body: 'Ruby Advanced answer', question: questions[4], correct: true  },
+                        { body: 'Go Basic answer', question: questions[5], correct: true  },
+                        { body: 'Go Intermediate answer', question: questions[6], correct: true  },
+                        { body: 'Go Advanced answer', question: questions[7], correct: true  },
+                        { body: 'HTML Basic answer', question: questions[8], correct: true  },
+                        { body: 'HTML Intermediate answer', question: questions[9], correct: true  },
+                        { body: 'HTML Advanced answer', question: questions[10], correct: true }])
 
 rules = Rule.create([{ name: "First try", rule_type: "first_try" },
                     { name: "Level completed", rule_type: "by_level" },

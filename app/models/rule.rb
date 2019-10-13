@@ -20,7 +20,7 @@ class Rule < ApplicationRecord
 
   def first_try?(test_passage)
     test = test_passage.test
-    test_passage.user.test_passages.by_test(test).count == 1 && test_passage.successed?
+    test_passage.user.test_passages.by_test(test).count == 1 && test_passage.success?
   end
 
   def by_level?(test_passage)

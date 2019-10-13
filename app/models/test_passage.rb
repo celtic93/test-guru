@@ -37,7 +37,7 @@ class TestPassage < ApplicationRecord
   end
 
   def set_status
-    self.status = successed? ? 'successed' : 'failed'
+    self.status = success? ? 'successed' : 'failed'
     save!
   end
 
