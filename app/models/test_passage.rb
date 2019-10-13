@@ -5,6 +5,11 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question, on: [:create, :update]
 
+  scope :successed, -> { where(status: 'successed') }
+  scope :by_test, -> (test) { where(test: test) }
+  scope :by_level, -> (level) { joins(:test).where(tests: {level: level}) }
+  scope :by_category, -> (category) { joins(:test).where(tests: {category: category}) }
+
   PASSING_SCORE = 85
 
   def accept!(answer_ids)
@@ -29,6 +34,17 @@ class TestPassage < ApplicationRecord
 
   def question_index
     test.questions.find_index(self.current_question)+1
+  end
+
+  def set_status
+    self.status = successed? ? 'successed' : 'failed'
+    save!
+  end
+
+  def add_badges
+    Badge.find_each do |badge|
+      user.badges.push(badge) if badge.suitable?(self)
+    end
   end
 
   private
