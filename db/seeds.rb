@@ -56,3 +56,12 @@ answers = Answer.create([{ body: 'Ruby Basic answer 1-1', question: questions[0]
                         { body: 'HTML Basic answer', question: questions[8] },
                         { body: 'HTML Intermediate answer', question: questions[9] },
                         { body: 'HTML Advanced answer', question: questions[10] }])
+
+rules = Rule.create([{ name: "First try", rule_type: "first_try" },
+                    { name: "Level completed", rule_type: "by_level" },
+                    { name: "Category completed", rule_type: "by_category" }])
+
+badges = Badge.create([{ name: "First try", rule: rules[0], image: 'https://cdn.pixabay.com/photo/2013/07/12/16/34/award-151151__340.png' },
+                      { name: "Level completed", rule: rules[1], image: 'https://cdn.pixabay.com/photo/2013/07/12/16/34/award-151151__340.png' },
+                      { name: "Category completed", rule: rules[2], image: 'https://cdn.pixabay.com/photo/2013/07/12/16/34/award-151151__340.png' }])
+
