@@ -47,6 +47,13 @@ class TestPassage < ApplicationRecord
     end
   end
 
+  def timeout?
+    current_time = Time.now.to_i
+    seconds = test.timer_value.seconds
+    created_time = updated_at.to_i
+    (current_time - created_time) - seconds > 0 
+  end
+
   private
 
   def correct_answer?(answer_ids)

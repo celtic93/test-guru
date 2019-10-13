@@ -6,6 +6,9 @@
   <%= content_tag :div, '', id: 'bar', data: { count: @test_passage.test.questions.count, question_index: @test_passage.question_index } %>
 </div>
 
+<%= content_tag :p, nil, class: 'countdownLabel',
+                           data: {seconds: @test_passage.test.timer_value} %>
+
 <p>
   <b><%= @test_passage.current_question.body %></b>
 </p>
