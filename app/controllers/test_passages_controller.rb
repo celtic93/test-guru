@@ -17,15 +17,15 @@ class TestPassagesController < ApplicationController
 
       if @test_passage.completed?
         @test_passage.set_status
-        @test_passage.add_badges
-        
+
+        service = AddBadgeService.new(@test_passage)
+        service.call
+
         TestsMailer.completed_test(@test_passage).deliver_now
         redirect_to result_test_passage_path(@test_passage)
       else
         render :show
       end
-    rescue Timeout::error
-      check_timeout
     end
   end
 

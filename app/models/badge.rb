@@ -4,7 +4,7 @@ class Badge < ApplicationRecord
   belongs_to :rule
   validates :name, presence: true
 
-  def suitable?(test_passage)
-    rule.passes?(test_passage)
-  end
+  # def suitable?(test_passage)
+  #   rule.passes?(test_passage)
+  # end
 end

@@ -3,19 +3,6 @@ class Rule < ApplicationRecord
   validates :name, presence: true
   validates :rule_type, presence: true
 
-  def passes?(test_passage)
-    case rule_type
-    when 'first_try'
-      first_try?(test_passage)
-    when 'by_level'
-      by_level?(test_passage)
-    when 'by_category'
-      by_category?(test_passage)
-    else
-      false
-    end
-  end
-
   private
 
   def first_try?(test_passage)

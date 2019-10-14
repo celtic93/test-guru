@@ -41,12 +41,6 @@ class TestPassage < ApplicationRecord
     save!
   end
 
-  def add_badges
-    Badge.find_each do |badge|
-      user.badges.push(badge) if badge.suitable?(self)
-    end
-  end
-
   def timeout?
     current_time = Time.now.to_i
     seconds = test.timer_value.seconds
