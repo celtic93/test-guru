@@ -1,6 +1,7 @@
 class TestPassagesController < ApplicationController
   before_action :authenticate_user!
   before_action :find_test_passage, only: %i[show update result gist]
+  before_action :check_timeout, only: %i[show update]
 
   def show
 
@@ -11,13 +12,20 @@ class TestPassagesController < ApplicationController
   end
 
   def update
-    @test_passage.accept!(params[:answer_ids])
+    Timeout::timeout(@test_passage.test.timer_value.seconds) do
+      @test_passage.accept!(params[:answer_ids])
 
-    if @test_passage.completed?
-      TestsMailer.completed_test(@test_passage).deliver_now
-      redirect_to result_test_passage_path(@test_passage)
-    else
-      render :show
+      if @test_passage.completed?
+        @test_passage.set_status
+
+        service = AddBadgeService.new(@test_passage)
+        service.call
+
+        TestsMailer.completed_test(@test_passage).deliver_now
+        redirect_to result_test_passage_path(@test_passage)
+      else
+        render :show
+      end
     end
   end
 
@@ -41,5 +49,11 @@ class TestPassagesController < ApplicationController
 
   def find_test_passage
     @test_passage = TestPassage.find(params[:id])
+  end
+
+  def check_timeout
+    if @test_passage.timeout?
+      render :result
+    end
   end
 end

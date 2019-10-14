@@ -30,6 +30,11 @@ Rails.application.routes.draw do
     end
 
     resources :gists, only: :index
+    resources :badges
+  end
+
+  resources :badges, only: :index do
+    get :user_badges, on: :collection
   end
 
   get 'contact-me', to: 'messages#new', as: 'new_message'

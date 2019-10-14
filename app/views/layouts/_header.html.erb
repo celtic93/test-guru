@@ -6,6 +6,8 @@
       <% if current_user.admin? %>
         <%= link_to 'Admin Panel', admin_tests_path %> |
       <% end %>
+      <%= link_to 'My badges', user_badges_badges_path %> |
+      <%= link_to 'All badges', badges_path %> |
       <%= link_to t('.logout'), destroy_user_session_path,
                       method: :delete,
                       data: { confirm: t('.confirm') } %>
