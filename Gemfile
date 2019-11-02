@@ -37,7 +37,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # AUTH
-gem 'devise', '~> 4.0'
+gem 'devise', '~> 4.7'
 
 # Localisation
 gem 'rails-i18n', '~> 5.0.0'
